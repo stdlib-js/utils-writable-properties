@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import writableProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-writable-properties@deno/mod.js';
+import writableProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-writable-properties@v0.1.0-deno/mod.js';
 ```
 
 #### writableProperties( obj )
@@ -83,7 +83,7 @@ var props = writableProperties( obj );
 import defineProperty from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@deno/mod.js';
 import hasSymbolSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@deno/mod.js';
 import Symbol from 'https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@deno/mod.js';
-import writableProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-writable-properties@deno/mod.js';
+import writableProperties from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-writable-properties@v0.1.0-deno/mod.js';
 
 var hasSymbols = hasSymbolSupport();
 
