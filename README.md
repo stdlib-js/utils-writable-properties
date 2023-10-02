@@ -35,43 +35,30 @@ limitations under the License.
 
 > Return an array of an object's own writable property names and symbols.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-writable-properties
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-writableProperties = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-writable-properties@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-writable-properties/tags). For example,
-
-```javascript
-writableProperties = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-writable-properties@v0.1.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var writableProperties = require( 'path/to/vendor/umd/utils-writable-properties/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-writable-properties@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.writableProperties;
-})();
-</script>
+var writableProperties = require( '@stdlib/utils-writable-properties' );
 ```
 
 #### writableProperties( obj )
@@ -108,16 +95,11 @@ var props = writableProperties( obj );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-writable-properties@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var defineProperty = require( '@stdlib/utils-define-property' );
+var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
+var Symbol = require( '@stdlib/symbol-ctor' );
+var writableProperties = require( '@stdlib/utils-writable-properties' );
 
 var hasSymbols = hasSymbolSupport();
 
@@ -149,11 +131,6 @@ if ( hasSymbols ) {
 var obj = new Foo();
 var props = writableProperties( obj );
 // e.g., returns [ 'a', ... ]
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -215,8 +192,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/utils-writable-properties.svg
 [npm-url]: https://npmjs.org/package/@stdlib/utils-writable-properties
 
-[test-image]: https://github.com/stdlib-js/utils-writable-properties/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/utils-writable-properties/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/utils-writable-properties/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/utils-writable-properties/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-writable-properties/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/utils-writable-properties?branch=main
@@ -249,11 +226,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/utils/inherited-writable-properties]: https://github.com/stdlib-js/utils-inherited-writable-properties/tree/umd
+[@stdlib/utils/inherited-writable-properties]: https://github.com/stdlib-js/utils-inherited-writable-properties
 
-[@stdlib/utils/writable-properties-in]: https://github.com/stdlib-js/utils-writable-properties-in/tree/umd
+[@stdlib/utils/writable-properties-in]: https://github.com/stdlib-js/utils-writable-properties-in
 
-[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties/tree/umd
+[@stdlib/utils/properties]: https://github.com/stdlib-js/utils-properties
 
 <!-- </related-links> -->
 
